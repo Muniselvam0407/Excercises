@@ -13,8 +13,13 @@ public class printScreen {
 	static WebDriver driver;
 	
 	public static void screenshot() {
+		
+		
+		File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrfile,C:\\Users\\Poongkodiselvam\\Desktop\\Screenshot+"/fblogin.png ");
+	}
 
-		TakesScreenshot TS= (TakesScreenshot)driver;
+	/*	TakesScreenshot TS= (TakesScreenshot)driver;
 		
 		File screenshotAs = TS.getScreenshotAs(OutputType.FILE);
 		//System.out.println(screenshotAs);
@@ -28,6 +33,7 @@ public class printScreen {
 			e.printStackTrace();
 		}
 		
-	}
+	}*/
 
 }
+
